@@ -1,0 +1,332 @@
+/*
+Tutorial Title: CSS3 Metro Style Slide Out Menu
+Author: Sam Norton
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    color: #fff;
+    font-size: 12px;
+    margin-text: 0 24px 0 100px;
+    font-weight: 300;
+}
+
+/*= ICON BOXES
+--------------------------------------------------------*/
+ul.icon-menu {
+    margin-top: 55px;
+}
+
+li.icon-box {
+    width: 35px;
+    height: 40px;
+    list-style: none;
+    right: 15px;
+    position: relative;
+    margin-bottom: 7px;
+}
+
+li.icon-box.con {
+    background: #0000FF;
+}
+
+li.icon-box.dco {
+    background: #FF0000;
+}
+
+li.icon-box.dhu {
+    background: #FF4500;
+}
+
+li.icon-box.dnu {
+    background: #FF8C00;
+}
+
+li.icon-box.rto {
+    background: #808080;
+}
+
+li.icon-box.kanan {
+    background: #6cd6ad;
+}
+nav {
+  padding-top: 0;
+}
+
+.nav-left {
+  position: fixed;
+  left: -12px;
+  top: 10px;
+}
+
+.nav-left.visible-xs {
+  z-index: 3;
+}
+
+@media (min-width: auto) {
+  .nav-left {
+    position: absolute;
+  }
+ 
+  .visible-xs {
+    display: none;
+  }
+}
+
+.nav-right {
+  position: fixed;
+  right: -7px;
+  top: 11px;
+}
+
+.nav-right.visible-xs {
+  z-index: 3;
+}
+
+@media (min-width: auto) {
+  .nav-right {
+    position: absolute;
+  }
+ 
+  .visible-xs {
+    display: none;
+  }
+}
+.icon-box h2 {
+    font-size: 12px;
+    text-shadow: 1px 1px 2px rgba(150,150,150,1);
+}
+
+.icon-box a {
+    display: block;
+    padding: 0;
+    width: 35px;
+    height: 40px;
+}
+
+.fa-map-marker {
+    position: absolute;
+    pointer-events: none;
+    color: #fff;
+    margin: -1px 0 0 1px;
+}
+
+.fa-whatsapp {
+    position: absolute;
+    pointer-events: none;
+    color: #fff;
+    margin: -6px 0 0 -7px;
+}
+
+.fa-sitemap {
+    position: absolute;
+    pointer-events: none;
+    color: #fff;
+    margin: -1px 0 0 -3px;
+}
+
+.fa-cog {
+    position: absolute;
+    pointer-events: none;
+    color: #fff;
+    margin: -1px 0 0 -3px;
+}
+
+.fa-power-off {
+    position: absolute;
+    pointer-events: none;
+    color: #fff;
+    margin: -1px 0 0 -3px;
+}
+
+.icon-box a:focus,.icon-box a:active {
+    outline: none;
+}
+
+
+/*= MENU ICONS
+--------------------------------------------------------*/
+.icon-box a {
+    padding: 2px;
+}
+
+.icon-menu i {
+    border-radius: 50%;
+    box-shadow: 0 0 0 50px transparent;
+    padding: .2em .25em;
+    background: rgba(255,255,255,0.1);
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: box-shadow .6s ease-in-out;
+    -moz-transition: box-shadow .6s ease-in-out;
+    -o-transition: box-shadow .6s ease-in-out;
+    -ms-transition: box-shadow .6s ease-in-out;
+    transition: box-shadow .6s ease-in-out;
+}
+
+.icon-menu li:hover i,.icon-menu li:active i,.icon-menu li:focus i {
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.2);
+    -webkit-transition: box-shadow .4s ease-in-out;
+    -moz-transition: box-shadow .4s ease-in-out;
+    -o-transition: box-shadow .4s ease-in-out;
+    -ms-transition: box-shadow .4s ease-in-out;
+    transition: box-shadow .4s ease-in-out;
+}
+
+
+
+/*= TITLE BOXES
+--------------------------------------------------------*/
+.icon-box.con h2 {
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    opacity: 0;
+    background: #0000FF;
+    line-height: 40px;
+    width: 160px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    border-left: 3px solid #fff;
+}
+
+.icon-box.con a:hover h2 {
+    opacity: 1;
+    left: 50px;
+    margin: 0;
+    text-align: center;
+}
+
+.icon-box.dco h2 {
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    opacity: 0;
+    background: #FF0000;
+    line-height: 40px;
+    width: 150px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    border-left: 3px solid #fff;
+}
+
+.icon-box.dco a:hover h2 {
+    opacity: 1;
+    left: 50px;
+    margin: 0;
+    text-align: center;
+}
+
+.icon-box.dhu h2 {
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    opacity: 0;
+    background: #FF4500;
+    line-height: 40px;
+    width: 210px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    border-left: 3px solid #fff;
+}
+
+.icon-box.dhu a:hover h2 {
+    opacity: 1;
+    left: 50px;
+    margin: 0;
+    text-align: center;
+}
+
+.icon-box.dnu h2 {
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    opacity: 0;
+    background: #FF8C00;
+    line-height: 40px;
+    width: 210px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    border-left: 3px solid #fff;
+}
+
+.icon-box.dnu a:hover h2 {
+    opacity: 1;
+    left: 50px;
+    margin: 0;
+    text-align: center;
+}
+
+.icon-box.rto h2 {
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    opacity: 0;
+    background: #808080;
+    line-height: 40px;
+    width: 210px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    border-left: 3px solid #fff;
+}
+
+.icon-box.rto a:hover h2 {
+    opacity: 1;
+    left: 50px;
+    margin: 0;
+    text-align: center;
+}
+
+.icon-box.kanan h2 {
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    right: -200px;
+    opacity: 0;
+    background: #6cd6ad;
+    line-height: 40px;
+    width: 160px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    border-right: 3px solid #fff;
+}
+
+.icon-box.kanan a:hover h2 {
+    opacity: 1;
+    right: 40px;
+    margin: 0;
+    text-align: center;
+}
+
